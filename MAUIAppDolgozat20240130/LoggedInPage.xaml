@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIAppDolgozat20240130.Resources.LoggedInPage"
+             Title="LoggedInPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Top Center - Welcome Text -->
+        <Label x:Name="UdvFelhLabel"
+               Text=""
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+        <!-- Bottom - Split into two sides -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Left Side - List -->
+            <ListView x:Name="AdatLista"
+                      VerticalOptions="Center" />
+
+            <!-- Right Side - Buttons in a Vertical Column -->
+            <StackLayout Grid.Column="1"
+                         VerticalOptions="Center">
+                <Entry x:Name="EtrAdatBe"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Button x:Name="FelvitelBtn"
+                        Text="Felvitel"
+                        SemanticProperties.Hint="Felvitel a listába"
+                        Clicked="OnFelvitelClicked"
+                        HorizontalOptions="Center"
+                        Padding="12"
+                        Margin="12"/>
+                <Button x:Name="BeszurBtn"
+                        Text="Beszúrás"
+                        SemanticProperties.Hint="Beszúrás a listába"
+                        Clicked="OnBeszurClicked"
+                        HorizontalOptions="Center"
+                        Padding="12"
+                        Margin="12"/>
+                <Button x:Name="TorlesBtn"
+                        Text="Kijelölt törlése"
+                        SemanticProperties.Hint="Kijelölt elem törlése a listából"
+                        Clicked="OnTorlesClicked"
+                        HorizontalOptions="Center"
+                        Padding="12"
+                        Margin="12"/>
+                <Button x:Name="TeljTorles"
+                        Text="Lista Törlése"
+                        SemanticProperties.Hint="Lista törlése"
+                        Clicked="OnTeljTorlesClicked"
+                        HorizontalOptions="Center"
+                        Padding="12"
+                        Margin="12"/>
+                <Button x:Name="MentBtn"
+                        Text="Mentés"
+                        SemanticProperties.Hint="Lista mentése fájlba"
+                        Clicked="OnMentClicked"
+                        HorizontalOptions="Center"
+                        Padding="12"
+                        Margin="12"/>
+                <Button x:Name="BetoltBtn"
+                        Text="Betöltés"
+                        SemanticProperties.Hint="Lista betöltése fájlból"
+                        Clicked="OnBetoltClicked"
+                        HorizontalOptions="Center"
+                        Padding="12"
+                        Margin="12"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

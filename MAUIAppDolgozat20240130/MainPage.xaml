@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIAppDolgozat20240130.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            
+            <Image
+                Source="kk_logo_fekete.png"
+                SemanticProperties.Description="Miskolci SZC Kandó Kálmán Informatikai Technikuma"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+Text="Bejelentkezés"
+SemanticProperties.HeadingLevel="Level1"
+FontSize="32"
+HorizontalOptions="Center" />
+
+            <Label
+                Text="Felhasználónév"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Felhasználónév"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            <Entry
+    x:Name="EtrFelhNev"
+    VerticalOptions="Center"
+    HorizontalOptions="Center"
+    WidthRequest="200"
+    />
+            <Label
+            Text="Jelszó"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Jelszó"
+            FontSize="18"
+            HorizontalOptions="Center" />
+            <Entry
+x:Name="EtrJelszo"
+VerticalOptions="Center"
+HorizontalOptions="Center"
+WidthRequest="200"
+/>
+            <HorizontalStackLayout VerticalOptions="Center"
+                                   HorizontalOptions="Center">
+                <Button
+x:Name="RegisterBtn"
+Text="Regisztráció"
+SemanticProperties.Hint="Regisztráció és továbblépés"
+Clicked="OnRegisterClicked"
+HorizontalOptions="Center"
+                    Padding="12"
+                    Margin="12"/>
+                <Button
+            x:Name="LoginBtn"
+            Text="Bejelentkezés"
+            SemanticProperties.Hint="Bejelentkezés és továbblépés"
+            Clicked="OnLoginClicked"
+            HorizontalOptions="Center" 
+                    Padding="12"
+Margin="12"
+                    />
+            </HorizontalStackLayout>
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
